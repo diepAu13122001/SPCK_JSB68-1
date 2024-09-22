@@ -118,7 +118,7 @@ function renderSoccerPosts() {
               <p class="card-text text-truncate" style="max-width: 100%">
                 ${soccerPosts[index].description}
               </p>
-              <a href="./html/detail.html" id="${soccerPosts[index].id}"  class="btn btn-primary">chi tiết </a>
+              <a href="./html/detail.html" data-id="${soccerPosts[index].id}"  class="btn btn-primary">chi tiết </a>
             </div>
           </div>
         </div>`;
