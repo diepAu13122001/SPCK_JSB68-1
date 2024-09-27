@@ -1,6 +1,10 @@
 body {
     padding: 0;
     margin:0 auto;
-
 }
 
+/* card */
+.card img {
+    object-fit: cover;
+    max-height: 350px;
+}
