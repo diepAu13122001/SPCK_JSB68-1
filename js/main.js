@@ -111,26 +111,31 @@ const soccerPosts = [
   },
 ];
 //   load danh sach post len giao dien
-function renderSoccerPosts() {
+function renderSoccerPosts(postList) {
   // lay lai danh sach chua cac bai post
   const list = document.getElementById("list");
-  for (let index = 0; index < soccerPosts.length; index++) {
+  for (let index = 0; index < postList.length; index++) {
     list.innerHTML += `<div class="col-lg-6 col-sm-12">
             <div class="card">
               <img
-                src="${soccerPosts[index].image}"
+                src="${postList[index].image}"
                 class="card-img-top"
                 alt="..."
               />
               <div class="card-body">
-                <h5 class="card-title">${soccerPosts[index].title}</h5>
+                <h5 class="card-title">${postList[index].title}</h5>
                 <p class="card-text text-truncate" style="max-width: 100%">
-                  ${soccerPosts[index].description}
+                  ${postList[index].description}
                 </p>
-                <a href="${soccerPosts[index].htmlLink}" data-id="${soccerPosts[index].id}"  class="btn btn-primary">chi tiết </a>
+                <a href="${postList[index].htmlLink}" data-id="${postList[index].id}"  class="btn btn-primary">chi tiết </a>
               </div>
             </div>
           </div>`;
   }
 }
-renderSoccerPosts();
+renderSoccerPosts(soccerPosts);
+
+
+
+// **************************************************
+// search
